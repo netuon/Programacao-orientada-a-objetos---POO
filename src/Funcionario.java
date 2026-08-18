@@ -1,0 +1,25 @@
+//Classe que pai. A partir dela, as outras classes irao herdar seus atributos e metodos abstratos
+public abstract class Funcionario {
+    private String nome;
+    private Double salarioBase;
+
+    public Funcionario(String nome, Double salarioBase) {
+        this.nome = nome;
+        this.salarioBase = salarioBase;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public Double getSalarioBase() {
+        return salarioBase;
+    }
+
+    //metodo abstrato, ele obriga que as subclasses que herdarem a classe pai, o implementem
+    public abstract double calcularSaldo();
+
+    //metodo que e chamado no main, para mostrar os atributos de funcionario e seu novo salario
+    public void exibirDados (){
+        System.out.println("nome: " + nome + " " + "salario: " + salarioBase + "novo salario: " + calcularSaldo());
+    }
+
+}
