@@ -3,9 +3,16 @@ public abstract class Funcionario {
     private String nome;
     private Double salarioBase;
 
-    public Funcionario(String nome, Double salarioBase) {
+    public Nivel getNivel() {
+        return nivel;
+    }
+
+    private Nivel nivel;
+
+    public Funcionario(String nome, Double salarioBase, Nivel nivel) {
         this.nome = nome;
         this.salarioBase = salarioBase;
+        this.nivel = nivel;
     }
     public String getNome() {
         return nome;

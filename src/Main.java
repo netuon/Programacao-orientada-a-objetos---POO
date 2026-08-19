@@ -8,9 +8,9 @@ public class Main {
 
         //criacao de novos objetos;
         Departamento departamento = new Departamento("RH");
-        Gerente gerente = new Gerente("andre", 2000.0);
-        Vendedor vendedor = new Vendedor("maria", 1620.0, 100);
-        Estagiario estagiario = new Estagiario("paulo", 600.0, 200);
+        Gerente gerente = new Gerente("andre", 2000.0, Nivel.SENIOR);
+        Vendedor vendedor = new Vendedor("maria", 1620.0, 100, Nivel.PLENO);
+        Estagiario estagiario = new Estagiario("paulo", 600.0, 200, Nivel.JUNIOR);
 
         departamento.addFuncionario(gerente);
         departamento.addFuncionario(vendedor);

@@ -2,18 +2,18 @@
 public class Estagiario extends Funcionario{
     private int bolsaAuxilio;
 
-    public Estagiario(String nome, Double salarioBase, int bolsaAuxilio) {
-        super(nome, salarioBase);
+    public Estagiario(String nome, Double salarioBase, int bolsaAuxilio, Nivel nivel) {
+        super(nome, salarioBase, nivel);
         this.bolsaAuxilio = bolsaAuxilio;
     }
 
     @Override
     public double calcularSaldo() {
-        return getSalarioBase()+ bolsaAuxilio;
+        return getSalarioBase() * getNivel().getMultiplicador() + bolsaAuxilio;
     }
 
     @Override
     public String toString (){
-        return "Gerente: " + getNome() + " | " + "salarioAtual: " + getSalarioBase() + " | " + "saldo: " + calcularSaldo();
+        return "Estagiario: " + getNome() + " | " + "salarioAtual: " + getSalarioBase() + " | " + "saldo: " + calcularSaldo();
     }
 }

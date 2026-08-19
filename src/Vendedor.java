@@ -6,14 +6,14 @@ public class Vendedor extends Funcionario implements Bonificavel{
         return totalVendas;
     }
 
-    public Vendedor(String nome, Double salarioBase, int totalVendas) {
-        super(nome, salarioBase);
+    public Vendedor(String nome, Double salarioBase, int totalVendas, Nivel nivel) {
+        super(nome, salarioBase, nivel);
         this.totalVendas = totalVendas;
     }
 
     @Override
     public double calcularSaldo() {
-        return getSalarioBase() + (getTotalVendas()*0.05);
+        return (getSalarioBase() * getNivel().getMultiplicador()) + (getTotalVendas()*0.05);
     }
 
     @Override
