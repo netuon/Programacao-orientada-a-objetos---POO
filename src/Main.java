@@ -17,8 +17,9 @@ public class Main {
         funcionarios.add(estagiario);
 
         //iteracao em cima da lista de funcionario, chamando o metodo exibirDados(), que mostra os atributos dos funcionarios;
-        for(Funcionario i : funcionarios){
+        for(Funcionario i : funcionarios) {
             i.exibirDados();
+
         }
 
     }

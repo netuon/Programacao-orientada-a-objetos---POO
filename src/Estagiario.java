@@ -11,4 +11,9 @@ public class Estagiario extends Funcionario{
     public double calcularSaldo() {
         return getSalarioBase()+ bolsaAuxilio;
     }
+
+    @Override
+    public String toString (){
+        return "Gerente: " + getNome() + " | " + "salarioAtual: " + getSalarioBase() + " | " + "saldo: " + calcularSaldo();
+    }
 }

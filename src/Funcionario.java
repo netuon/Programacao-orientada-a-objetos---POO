@@ -19,7 +19,7 @@ public abstract class Funcionario {
 
     //metodo que e chamado no main, para mostrar os atributos de funcionario e seu novo salario
     public void exibirDados (){
-        System.out.println("nome: " + nome + " " + "salario: " + salarioBase + "novo salario: " + calcularSaldo());
+        System.out.println(this.toString());
     }
 
 }
