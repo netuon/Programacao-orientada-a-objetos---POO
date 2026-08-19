@@ -7,9 +7,19 @@ public class Main {
         List<Funcionario> funcionarios = new ArrayList<>();
 
         //criacao de novos objetos;
+        Departamento departamento = new Departamento("RH");
         Gerente gerente = new Gerente("andre", 2000.0);
         Vendedor vendedor = new Vendedor("maria", 1620.0, 100);
         Estagiario estagiario = new Estagiario("paulo", 600.0, 200);
+
+        departamento.addFuncionario(gerente);
+        departamento.addFuncionario(vendedor);
+        departamento.addFuncionario(estagiario);
+        Double folhaTotal = departamento.calcularFolhaTotal();
+        Double maiorSalario = departamento.funcionarioMaisBemPago();
+
+        System.out.println(folhaTotal);
+        System.out.println(maiorSalario);
 
         //adicao dos objetos criados a lista;
         funcionarios.add(gerente);
